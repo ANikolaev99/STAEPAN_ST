@@ -40,7 +40,7 @@ def send_message_day1(message):
                          reply_markup=const.markup_menu_ST)
     elif message.text == "Не работал":
         bot.send_message(message.chat.id,
-                         'Ничего страшного, у нас дружный коллектив, мы тебя всему научим! 😎'
+                         'Ничего страшного, у нас дружный коллектив, мы тебя всему научим! 😎 '
                          'А сейчас я хочу немного рассказать о нашей компании. Готов?',
                          reply_markup=const.markup_menu_ST)
     elif message.text == "Готов":
@@ -74,12 +74,12 @@ def send_message_day1(message):
                                           'сети ресторанов McDonalds 🍔 🥤'
                                           '\nОпросы показали, что 18 наших коллег часто там обедают 🍟. Надеюсь, '
                                           'что они чередуют питание фастфуд и здоровую пищу 🥗', parse_mode="Markdown")
+        time.sleep(10)
         keyboard = types.InlineKeyboardMarkup()
         url_button = types.InlineKeyboardButton(text="Посмотреть видео",
                                                 url="https://drive.google.com/file/d/1jV-hFF9faiio-m8ylXz0Isqa"
                                                     "2NYjSIk8/view?usp=sharing")
         keyboard.add(url_button)
-        time.sleep(7)
         bot.send_message(message.chat.id,
                          'А еще мы любим участвовать в конкурсах, и я покажу тебе ролик о том, как мы представляем '
                          'себе работу в КЦ 😇',
@@ -99,8 +99,7 @@ def send_message_day1(message):
                                                               'давай определим, что получит активный и '
                                                               'заинтересованный участник 😃 '
                                                               'Тот, кто продолжит со мной общаться на протяжении 4 '
-                                                              'дней, '
-                                                              'получит набор новичка 🎁')
+                                                              'дней, получит набор новичка 🎁')
         time.sleep(3)
         keyboard_age = types.InlineKeyboardMarkup()
         callback_button_five = types.InlineKeyboardButton(text="5 лет", callback_data="5 лет")
@@ -395,7 +394,7 @@ def callback_worker_day1(call):
         time.sleep(1)
         bot.send_sticker(call.message.chat.id,
                          'CAACAgIAAxkBAAKhYV_0Yle0SGPn-KNgu80t-ElkeLPHAAICAAM7YCQUoMJLdBA-ZR4eBA')
-        time.sleep(30)
+        time.sleep(86400)
         msg = bot.send_message(call.message.chat.id,
                                'Привет, соскучился? '
                                '\nЯ очень 🥰 '
@@ -896,7 +895,7 @@ def callback_worker_day1(call):
         bot.send_sticker(call.message.chat.id,
                          'CAACAgIAAxkBAAKhg1_0a_SX4J9FVDgej0Z9sFuV0PedAAIxAAPBnGAMxg4yoItadaUeBA')
         time.sleep(1)
-        bot.send_message(call.message.chat.id, 'Верно! 🦉')
+        bot.send_message(call.message.chat.id, 'Верно!')
         time.sleep(5)
         keyboard_vopros6 = types.InlineKeyboardMarkup()
         callback_button_izvinenie = types.InlineKeyboardButton(text="принести извинение", callback_data="izvinenie")
@@ -976,7 +975,7 @@ def callback_worker_day1(call):
         bot.send_sticker(call.message.chat.id,
                          'CAACAgIAAxkBAAKhjF_0dxv0Q2OE3tpY-zrIFLj7efdUAAIpAAPBnGAM8EupHr_Y33weBA')
         time.sleep(1)
-        bot.send_message(call.message.chat.id, 'Верно! 🦉')
+        bot.send_message(call.message.chat.id, 'Верно!')
         time.sleep(1)
         keyboard_vopros7 = types.InlineKeyboardMarkup()
         callback_button_blagodary = types.InlineKeyboardButton(text="благодарю за", callback_data="blagodary")
@@ -1118,7 +1117,7 @@ def callback_worker_day1(call):
         bot.send_sticker(call.message.chat.id,
                          'CAACAgIAAxkBAAKydWACodQYvIcGaBIpNhOTCtAC0KGLAAL0AwACRxVoCVCTOd91YktlHgQ')
         time.sleep(1)
-        bot.send_message(call.message.chat.id, 'Верно! 🦉')
+        bot.send_message(call.message.chat.id, 'Верно!')
         time.sleep(2)
         keyboard_vopros9 = types.InlineKeyboardMarkup()
         callback_button_1 = types.InlineKeyboardButton(text="Все варианты верны", callback_data="все_в9_день2")
@@ -1301,7 +1300,7 @@ def callback_worker_day1(call):
     if call.data == "все_в10_день2":
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\n_В психологии есть такое понятие, как подстройка. _'
-                                               '_Если два собеседника ведут себя походим образом, _'
+                                               '_Если два собеседника ведут себя похожим образом, _'
                                                '_эта похожесть поведения сближает их и делает _'
                                                '_контакт между ними более прочным_'
                                                '\n'
@@ -1330,7 +1329,7 @@ def callback_worker_day1(call):
     if call.data == "кромеБ_в10_день2":
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\n_В психологии есть такое понятие, как подстройка. _'
-                                               '_Если два собеседника ведут себя походим образом, _'
+                                               '_Если два собеседника ведут себя похожим образом, _'
                                                '_эта похожесть поведения сближает их и делает _'
                                                '_эта похожесть поведения сближает их и делает _'
                                                '_контакт между ними более прочным_'
@@ -1360,7 +1359,7 @@ def callback_worker_day1(call):
     if call.data == "АВ_в10_день2":
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\n_В психологии есть такое понятие, как подстройка. _'
-                                               '_Если два собеседника ведут себя походим образом, _'
+                                               '_Если два собеседника ведут себя похожим образом, _'
                                                '_эта похожесть поведения сближает их и делает _'
                                                '_контакт между ними более прочным_'
                                                '\n'
@@ -1392,7 +1391,7 @@ def callback_worker_day1(call):
         time.sleep(1)
         bot.send_message(call.message.chat.id, 'Верно! 🦉'
                                                '\n_В психологии есть такое понятие, как подстройка. _'
-                                               '_Если два собеседника ведут себя походим образом, _'
+                                               '_Если два собеседника ведут себя похожим образом, _'
                                                '_эта похожесть поведения сближает их и делает _'
                                                '_контакт между ними более прочным_'
                                                '\n'
@@ -1411,84 +1410,84 @@ def callback_worker_day1(call):
     # Вопрос 11
     if call.data == "kvArtal":
         keyboard_vopros11b = types.InlineKeyboardMarkup()
-        callback_button_v1 = types.InlineKeyboardButton(text="КатАлог", callback_data="katAlog")
+        callback_button_v1 = types.InlineKeyboardButton(text="катАлог", callback_data="katAlog")
         callback_button_v2 = types.InlineKeyboardButton(text="каталОг", callback_data="katalOg")
         keyboard_vopros11b.add(callback_button_v1, callback_button_v2)
         bot.send_message(call.message.chat.id, 'Не верно',
                          reply_markup=keyboard_vopros11b)
     if call.data == "kvartAl":
         keyboard_vopros11b = types.InlineKeyboardMarkup()
-        callback_button_v1 = types.InlineKeyboardButton(text="КатАлог", callback_data="katAlog")
+        callback_button_v1 = types.InlineKeyboardButton(text="катАлог", callback_data="katAlog")
         callback_button_v2 = types.InlineKeyboardButton(text="каталОг", callback_data="katalOg")
         keyboard_vopros11b.add(callback_button_v1, callback_button_v2)
         bot.send_message(call.message.chat.id, 'Верно',
                          reply_markup=keyboard_vopros11b)
     if call.data == "katAlog":
         keyboard_vopros11c = types.InlineKeyboardMarkup()
-        callback_button_v1 = types.InlineKeyboardButton(text="ЗвОнит", callback_data="zvOnit")
+        callback_button_v1 = types.InlineKeyboardButton(text="звОнит", callback_data="zvOnit")
         callback_button_v2 = types.InlineKeyboardButton(text="звонИт", callback_data="zvonIt")
         keyboard_vopros11c.add(callback_button_v1, callback_button_v2)
         bot.send_message(call.message.chat.id, 'Не верно',
                          reply_markup=keyboard_vopros11c)
     if call.data == "katalOg":
         keyboard_vopros11c = types.InlineKeyboardMarkup()
-        callback_button_v1 = types.InlineKeyboardButton(text="ЗвОнит", callback_data="zvOnit")
+        callback_button_v1 = types.InlineKeyboardButton(text="звОнит", callback_data="zvOnit")
         callback_button_v2 = types.InlineKeyboardButton(text="звонИт", callback_data="zvonIt")
         keyboard_vopros11c.add(callback_button_v1, callback_button_v2)
         bot.send_message(call.message.chat.id, 'Верно',
                          reply_markup=keyboard_vopros11c)
     if call.data == "zvOnit":
         keyboard_vopros11d = types.InlineKeyboardMarkup()
-        callback_button_v1 = types.InlineKeyboardButton(text="ДокУмент", callback_data="dokYment")
+        callback_button_v1 = types.InlineKeyboardButton(text="докУмент", callback_data="dokYment")
         callback_button_v2 = types.InlineKeyboardButton(text="докумЕнт", callback_data="dokymEnt")
         keyboard_vopros11d.add(callback_button_v1, callback_button_v2)
         bot.send_message(call.message.chat.id, 'Не верно',
                          reply_markup=keyboard_vopros11d)
     if call.data == "zvonIt":
         keyboard_vopros11d = types.InlineKeyboardMarkup()
-        callback_button_v1 = types.InlineKeyboardButton(text="ДокУмент", callback_data="dokYment")
+        callback_button_v1 = types.InlineKeyboardButton(text="докУмент", callback_data="dokYment")
         callback_button_v2 = types.InlineKeyboardButton(text="докумЕнт", callback_data="dokymEnt")
         keyboard_vopros11d.add(callback_button_v1, callback_button_v2)
         bot.send_message(call.message.chat.id, 'Верно',
                          reply_markup=keyboard_vopros11d)
     if call.data == "dokYment":
         keyboard_vopros11e = types.InlineKeyboardMarkup()
-        callback_button_v1 = types.InlineKeyboardButton(text="ДОговор", callback_data="dogOvor")
+        callback_button_v1 = types.InlineKeyboardButton(text="дОговор", callback_data="dogOvor")
         callback_button_v2 = types.InlineKeyboardButton(text="договОр", callback_data="dogovOr")
         keyboard_vopros11e.add(callback_button_v1, callback_button_v2)
         bot.send_message(call.message.chat.id, 'Не верно',
                          reply_markup=keyboard_vopros11e)
     if call.data == "dokymEnt":
         keyboard_vopros11e = types.InlineKeyboardMarkup()
-        callback_button_v1 = types.InlineKeyboardButton(text="ДОговор", callback_data="dogOvor")
+        callback_button_v1 = types.InlineKeyboardButton(text="дОговор", callback_data="dogOvor")
         callback_button_v2 = types.InlineKeyboardButton(text="договОр", callback_data="dogovOr")
         keyboard_vopros11e.add(callback_button_v1, callback_button_v2)
         bot.send_message(call.message.chat.id, 'Верно',
                          reply_markup=keyboard_vopros11e)
     if call.data == "dogOvor":
         keyboard_vopros11f = types.InlineKeyboardMarkup()
-        callback_button_v1 = types.InlineKeyboardButton(text="НАчался", callback_data="nAchalsya")
-        callback_button_v2 = types.InlineKeyboardButton(text="началсЯ", callback_data="nachalcYA")
+        callback_button_v1 = types.InlineKeyboardButton(text="нАчался", callback_data="nAchalsya")
+        callback_button_v2 = types.InlineKeyboardButton(text="началсЯ", callback_data="nachalsYA")
         keyboard_vopros11f.add(callback_button_v1, callback_button_v2)
         bot.send_message(call.message.chat.id, 'Не верно',
                          reply_markup=keyboard_vopros11f)
     if call.data == "dogovOr":
         keyboard_vopros11f = types.InlineKeyboardMarkup()
-        callback_button_v1 = types.InlineKeyboardButton(text="НАчался", callback_data="nAchalsya")
+        callback_button_v1 = types.InlineKeyboardButton(text="нАчался", callback_data="nAchalsya")
         callback_button_v2 = types.InlineKeyboardButton(text="началсЯ", callback_data="nachalsYA")
         keyboard_vopros11f.add(callback_button_v1, callback_button_v2)
         bot.send_message(call.message.chat.id, 'Верно',
                          reply_markup=keyboard_vopros11f)
     if call.data == "nAchalsya":
         keyboard_vopros11g = types.InlineKeyboardMarkup()
-        callback_button_v1 = types.InlineKeyboardButton(text="СрЕдства", callback_data="srEdstva")
-        callback_button_v2 = types.InlineKeyboardButton(text="средствА", callback_data="sravdtvA")
+        callback_button_v1 = types.InlineKeyboardButton(text="срЕдства", callback_data="srEdstva")
+        callback_button_v2 = types.InlineKeyboardButton(text="средствА", callback_data="sredstvA")
         keyboard_vopros11g.add(callback_button_v1, callback_button_v2)
         bot.send_message(call.message.chat.id, 'Не верно',
                          reply_markup=keyboard_vopros11g)
     if call.data == "nachalsYA":
         keyboard_vopros11g = types.InlineKeyboardMarkup()
-        callback_button_v1 = types.InlineKeyboardButton(text="СрЕдства", callback_data="srEdstva")
+        callback_button_v1 = types.InlineKeyboardButton(text="срЕдства", callback_data="srEdstva")
         callback_button_v2 = types.InlineKeyboardButton(text="средствА", callback_data="sredstvA")
         keyboard_vopros11g.add(callback_button_v1, callback_button_v2)
         bot.send_message(call.message.chat.id, 'Верно',
@@ -1509,14 +1508,14 @@ def callback_worker_day1(call):
                          reply_markup=keyboard_vopros11h)
     if call.data == "Akspert":
         keyboard_vopros11i = types.InlineKeyboardMarkup()
-        callback_button_v1 = types.InlineKeyboardButton(text="ПОняла", callback_data="pOnyala")
+        callback_button_v1 = types.InlineKeyboardButton(text="пОняла", callback_data="pOnyala")
         callback_button_v2 = types.InlineKeyboardButton(text="понялА", callback_data="ponyalA")
         keyboard_vopros11i.add(callback_button_v1, callback_button_v2)
         bot.send_message(call.message.chat.id, 'Не верно',
                          reply_markup=keyboard_vopros11i)
     if call.data == "akspErt":
         keyboard_vopros11i = types.InlineKeyboardMarkup()
-        callback_button_v1 = types.InlineKeyboardButton(text="ПОняла", callback_data="pOnyala")
+        callback_button_v1 = types.InlineKeyboardButton(text="пОняла", callback_data="pOnyala")
         callback_button_v2 = types.InlineKeyboardButton(text="понялА", callback_data="ponyalA")
         keyboard_vopros11i.add(callback_button_v1, callback_button_v2)
         bot.send_message(call.message.chat.id, 'Верно',
@@ -1548,7 +1547,7 @@ def callback_worker_day1(call):
     if call.data == "vistypil":
         bot.send_message(call.message.chat.id, 'Не верно 🦉'
                         '\n_В разговорной речи частотно использование смыслового (а не грамматического) _'
-                        '_согласования при существительных мужского рода, характеризующих лиц женского пола._'
+                        '_согласования при существительных мужского рода, характеризующих лиц женского пола. _'
                         '_Врач пришла; Профессор сказала; Директор школы уволилась._'
                         '_Однако в официальной речи замена грамматического согласования смысловым не допускается, _'
                         '_за исключением тех случаев, когда такое существительное имеет при себе имя собственное._'
@@ -1587,7 +1586,7 @@ def callback_worker_day1(call):
                             '_Например: Опытный врач Петрова внимательна к больным. _'
                             '_Определение-причастие всегда согласуется с именем собственным._',
                          parse_mode="Markdown")
-        time.sleep(1)
+        time.sleep(10)
         keyboard = types.InlineKeyboardMarkup()
         url_button = types.InlineKeyboardButton(text="Посмотреть видео",
                                                 url="https://drive.google.com/file/d/1T4uATW-04zxK"
@@ -1618,7 +1617,7 @@ def callback_worker_day1(call):
         bot.send_sticker(call.message.chat.id,
                          'CAACAgIAAxkBAAKyaWACoTbx1MgG8wABryiHEg0_V8PkIgACQAADUomRIzVcuj961kKJHgQ')
         bot.send_message(call.message.chat.id, 'Верно!')
-        time.sleep(1)
+        time.sleep(3)
         keyboard = types.InlineKeyboardMarkup()
         url_button = types.InlineKeyboardButton(text="Посмотреть видео",
                                                 url="https://drive.google.com/file/d/1T4uATW-04zxK"
@@ -1828,6 +1827,12 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Ух, отлично пообщались! Я очень доволен тем, что мы стали ближе. '
                                                'А ты приблизился еще на один шаг к работе в проекте. '
                                                'Хорошего дня! До встречи завтра 🤗')
+        time.sleep(86400)
+        msg = bot.send_message(call.message.chat.id,
+                               'Привет! Так рад нашей новой встрече 🥰 Предлагаю продолжить наше веселое '
+                               'времяпровождение.  Знаешь ли ты, что такое потребности?',
+                               reply_markup=const.markup_menu_day3_start)
+        bot.register_next_step_handler(msg, send_message_day3)
     if call.data == "da_16":
         bot.send_message(call.message.chat.id,
                          'Не верно!'
@@ -1837,6 +1842,12 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Ух, отлично пообщались! Я очень доволен тем, что мы стали ближе. '
                                                'А ты приблизился еще на один шаг к работе в проекте. '
                                                'Хорошего дня! До встречи завтра 🤗')
+        time.sleep(86400)
+        msg = bot.send_message(call.message.chat.id,
+                               'Привет! Так рад нашей новой встречи 🥰 Предлагаю продолжить наше веселое '
+                               'времяпровождение.  Знаешь ли ты, что такое потребности?',
+                               reply_markup=const.markup_menu_day3_start)
+        bot.register_next_step_handler(msg, send_message_day3)
     if call.data == "net16":
         bot.send_sticker(call.message.chat.id,
                          'CAACAgIAAxkBAAKhWF_0YUBwN-Hq_w4Zg13nWNtevF4TAAKVAAM7YCQU5x7C_1LNemYeBA')
@@ -1847,7 +1858,7 @@ def callback_worker_day1(call):
                                                'Хорошего дня! До встречи завтра 🤗')
         bot.send_sticker(call.message.chat.id,
                          'CAACAgIAAxkBAAKh_l_0zOQ68yK424xFkKPfF82_T8BaAAIwAAPBnGAML87fE0wKZ5weBA')
-        time.sleep(30)
+        time.sleep(86400)
         msg = bot.send_message(call.message.chat.id,
                                'Привет! Так рад нашей новой встречи 🥰 Предлагаю продолжить наше веселое '
                                'времяпровождение.  Знаешь ли ты, что такое потребности?',
@@ -1859,22 +1870,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -1901,22 +1914,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -1943,22 +1958,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -1985,22 +2002,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2027,22 +2046,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2093,22 +2114,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2133,22 +2156,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2173,22 +2198,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2213,22 +2240,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2253,22 +2282,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2323,22 +2354,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2369,22 +2402,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2415,22 +2450,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2461,22 +2498,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2507,22 +2546,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2581,22 +2622,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2625,22 +2668,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2669,22 +2714,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2713,22 +2760,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2757,22 +2806,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2827,22 +2878,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2869,22 +2922,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2911,22 +2966,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2953,22 +3010,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -2995,22 +3054,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3063,22 +3124,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3105,22 +3168,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3147,22 +3212,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3189,22 +3256,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3231,22 +3300,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3297,22 +3368,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3337,22 +3410,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3377,22 +3452,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3417,22 +3494,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3457,22 +3536,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3521,22 +3602,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3561,22 +3644,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3601,22 +3686,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3641,22 +3728,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3681,22 +3770,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3745,22 +3836,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3785,22 +3878,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3825,22 +3920,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3865,22 +3962,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3905,22 +4004,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -3969,22 +4070,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -4009,22 +4112,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -4049,22 +4154,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -4089,22 +4196,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -4129,22 +4238,24 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\nПопробуй еще раз 🙂 Вот тебе подсказка:'
                                                '\n_Покупательские мотивы:_'
-                                               '\n_Безопасности - Ищет защищенность и гарантию, оценивает репутацию _'
+                                               '\n_❗ Безопасности: Ищет защищенность и гарантию, оценивает репутацию _'
                                                '_компании._'
                                                '\n'
-                                               '\n_Привязанности - Восприимчив к симпатии или ее отсутствии у _'
+                                               '\n_❗ Привязанности: Восприимчив к симпатии или ее отсутствии у _'
                                                '_продавца, к подарку или скидке, которые будут ему сделаны. _'
                                                '\n'
-                                               '\n_Комфорта - Удобство, которое приобретает клиент с покупкой товара._'
+                                               '\n_❗ Комфорта: Удобство, которое приобретает клиент с покупкой _'
+                                               '_товара._'
                                                '\n'
-                                               '\n_Престижа - Стремление клиента выделяться на общем фоне. Качество _'
+                                               '\n_❗ Престижа: Стремление клиента выделяться на общем фоне. Качество _'
                                                '_товара имеет большую роль. Приближение к более _'
                                                '_высокому уровню жизни. _'
                                                '\n'
-                                               '\n_Новизны - Хотят быть соблазненными каким-либо новым способом: _'
+                                               '\n_❗ Новизны: Хотят быть соблазненными каким-либо новым способом: _'
                                                '_новым продуктом, который удовлетворит их потребность в перемене. _'
                                                '\n'
-                                               '\n_Экономии - Не всегда имеет решительное преобладание. Часто служит _'
+                                               '\n_❗ Экономии: Не всегда имеет решительное преобладание. _'
+                                               '_Часто служит _'
                                                '_прикрытием. Зачастую, цена – пустяк, в сравнении с услугами, _'
                                                '_которые может оказать товар._', parse_mode="Markdown")
         time.sleep(10)
@@ -4277,8 +4388,8 @@ def callback_worker_day1(call):
     # Вопрос 12
     if call.data == "Через 20 мин":
         bot.send_message(call.message.chat.id, 'Не верно!'
-                                               '\n_Одну таблетку вы выпиваете сейчас, через полчаса другую и через '
-                                               'полчаса третью...итого один час._', parse_mode="Markdown")
+                                               '\n_Одну таблетку вы выпиваете сейчас, через полчаса другую и через _'
+                                               '_полчаса третью...итого один час._', parse_mode="Markdown")
         time.sleep(1)
         keyboard_vopros13 = types.InlineKeyboardMarkup()
         btn_ne_odnogo = types.InlineKeyboardButton(text="Ни одного", callback_data="Ни одного")
@@ -4297,8 +4408,8 @@ def callback_worker_day1(call):
                          reply_markup=keyboard_vopros13)
     if call.data == "Через 40 мин":
         bot.send_message(call.message.chat.id, 'Не верно!'
-                                               '\n_Одну таблетку вы выпиваете сейчас, через полчаса другую и через '
-                                               'полчаса третью...итого один час._', parse_mode="Markdown")
+                                               '\n_Одну таблетку вы выпиваете сейчас, через полчаса другую и через _'
+                                               '_полчаса третью...итого один час._', parse_mode="Markdown")
         time.sleep(1)
         keyboard_vopros13 = types.InlineKeyboardMarkup()
         btn_ne_odnogo = types.InlineKeyboardButton(text="Ни одного", callback_data="Ни одного")
@@ -4317,8 +4428,9 @@ def callback_worker_day1(call):
                          reply_markup=keyboard_vopros13)
     if call.data == "Через 90 мин":
         bot.send_message(call.message.chat.id, 'Не верно!'
-                                               '\n_Одну таблетку вы выпиваете сейчас, через полчаса другую и через '
-                                               'полчаса третью...итого один час._', parse_mode="Markdown")
+                                               '\n_Сколько разных видов животных были спасены от потопа на ковчеге у _'
+                                               '_Моисея (если не знаете точно, отвечайте приблизительно)?_',
+                         parse_mode="Markdown")
         time.sleep(1)
         keyboard_vopros13 = types.InlineKeyboardMarkup()
         btn_ne_odnogo = types.InlineKeyboardButton(text="Ни одного", callback_data="Ни одного")
@@ -4337,8 +4449,8 @@ def callback_worker_day1(call):
                          reply_markup=keyboard_vopros13)
     if call.data == "Через 60 мин":
         bot.send_message(call.message.chat.id, 'Верно!'
-                                               '\n_Одну таблетку вы выпиваете сейчас, через полчаса другую и через '
-                                               'полчаса третью...итого один час._', parse_mode="Markdown")
+                                               '\n_Одну таблетку вы выпиваете сейчас, через полчаса другую и через _'
+                                               '_полчаса третью...итого один час._', parse_mode="Markdown")
         time.sleep(1)
         keyboard_vopros13 = types.InlineKeyboardMarkup()
         btn_ne_odnogo = types.InlineKeyboardButton(text="Ни одного", callback_data="Ни одного")
@@ -4358,8 +4470,8 @@ def callback_worker_day1(call):
     # Вопрос 13 КОНЦОВКА
     if call.data == "Несколько сотен":
         bot.send_message(call.message.chat.id, 'Не верно!'
-                                               '\n_Одну таблетку вы выпиваете сейчас, через полчаса другую и через '
-                                               'полчаса третью...итого один час._', parse_mode="Markdown")
+                                               '\n_У Моисея не было ковчега, соответственно он не спас _'
+                                               '_ни одно животное...Ноев ковчег_', parse_mode="Markdown")
         time.sleep(3)
         time.sleep(1)
         bot.send_message(call.message.chat.id,
@@ -4367,7 +4479,7 @@ def callback_worker_day1(call):
                          'хорошее настроение 😉')
         bot.send_sticker(call.message.chat.id,
                          'CAACAgIAAxkBAAKiNl_03-llfmp39RK74piTXmqM5zhnAAJXAwACz7vUDnOJW_OaTIUaHgQ')
-        time.sleep(30)
+        time.sleep(86400)
         bot.send_message(call.message.chat.id,
                          'Привет! Сегодня наше захватывающее путешествие подходит к концу, но именно '
                          'поэтому я подготовил для тебя самые интересные задания ☺ Поехали!')
@@ -4393,8 +4505,8 @@ def callback_worker_day1(call):
                          reply_markup=keyboard_vopros1)
     if call.data == "Несколько тысяч":
         bot.send_message(call.message.chat.id, 'Не верно!'
-                                               '\n_У Моисея не было ковчега, соответственно он не спас ни одно '
-                                               'животное... Ноев ковчег_', parse_mode="Markdown")
+                                               '\n_У Моисея не было ковчега, соответственно он не спас ни одно _'
+                                               '_животное... Ноев ковчег_', parse_mode="Markdown")
         time.sleep(3)
         bot.send_message(call.message.chat.id,
                          'Хм, мне кажется, что я буду по тебе скучать. До встречи завтра, с собой необходимо иметь '
@@ -4402,7 +4514,7 @@ def callback_worker_day1(call):
         time.sleep(1)
         bot.send_sticker(call.message.chat.id,
                          'CAACAgIAAxkBAAKiNl_03-llfmp39RK74piTXmqM5zhnAAJXAwACz7vUDnOJW_OaTIUaHgQ')
-        time.sleep(30)
+        time.sleep(86400)
         bot.send_message(call.message.chat.id,
                          'Привет! Сегодня наше захватывающее путешествие подходит к концу, но именно '
                          'поэтому я подготовил для тебя самые интересные задания ☺ Поехали!')
@@ -4428,8 +4540,8 @@ def callback_worker_day1(call):
                          reply_markup=keyboard_vopros1)
     if call.data == "Десятки тысяч":
         bot.send_message(call.message.chat.id, 'Не верно!'
-                                               '\n_У Моисея не было ковчега, соответственно он не спас ни одно '
-                                               'животное... Ноев ковчег_', parse_mode="Markdown")
+                                               '\n_У Моисея не было ковчега, соответственно он не спас ни одно _'
+                                               '_животное... Ноев ковчег_', parse_mode="Markdown")
         time.sleep(3)
         bot.send_message(call.message.chat.id,
                          'Хм, мне кажется, что я буду по тебе скучать. До встречи завтра, с собой необходимо иметь '
@@ -4437,7 +4549,7 @@ def callback_worker_day1(call):
         time.sleep(1)
         bot.send_sticker(call.message.chat.id,
                          'CAACAgIAAxkBAAKiNl_03-llfmp39RK74piTXmqM5zhnAAJXAwACz7vUDnOJW_OaTIUaHgQ')
-        time.sleep(30)
+        time.sleep(86400)
         bot.send_message(call.message.chat.id,
                          'Привет! Сегодня наше захватывающее путешествие подходит к концу, но именно '
                          'поэтому я подготовил для тебя самые интересные задания ☺ Поехали!')
@@ -4463,8 +4575,8 @@ def callback_worker_day1(call):
                          reply_markup=keyboard_vopros1)
     if call.data == "Около миллиона":
         bot.send_message(call.message.chat.id, 'Не верно!'
-                                               '\n_У Моисея не было ковчега, соответственно он не спас ни одно '
-                                               'животное... Ноев ковчег_', parse_mode="Markdown")
+                                               '\n_У Моисея не было ковчега, соответственно он не спас ни одно _'
+                                               '_животное... Ноев ковчег_', parse_mode="Markdown")
         time.sleep(3)
         bot.send_message(call.message.chat.id,
                          'Хм, мне кажется, что я буду по тебе скучать. До встречи завтра, с собой необходимо иметь '
@@ -4472,7 +4584,7 @@ def callback_worker_day1(call):
         time.sleep(1)
         bot.send_sticker(call.message.chat.id,
                          'CAACAgIAAxkBAAKiNl_03-llfmp39RK74piTXmqM5zhnAAJXAwACz7vUDnOJW_OaTIUaHgQ')
-        time.sleep(30)
+        time.sleep(86400)
         bot.send_message(call.message.chat.id,
                          'Привет! Сегодня наше захватывающее путешествие подходит к концу, но именно '
                          'поэтому я подготовил для тебя самые интересные задания ☺ Поехали!')
@@ -4498,8 +4610,8 @@ def callback_worker_day1(call):
                          reply_markup=keyboard_vopros1)
     if call.data == "Ни одного":
         bot.send_message(call.message.chat.id, 'Верно!'
-                                               '\n_У Моисея не было ковчега, соответственно он не спас ни одно '
-                                               'животное... Ноев ковчег_', parse_mode="Markdown")
+                                               '\n_У Моисея не было ковчега, соответственно он не спас ни одно _'
+                                               '_животное... Ноев ковчег_', parse_mode="Markdown")
         time.sleep(3)
         bot.send_message(call.message.chat.id,
                          'Хм, мне кажется, что я буду по тебе скучать. До встречи завтра, с собой необходимо иметь '
@@ -4509,7 +4621,7 @@ def callback_worker_day1(call):
                          'CAACAgIAAxkBAAKiNl_03-llfmp39RK74piTXmqM5zhnAAJXAwACz7vUDnOJW_OaTIUaHgQ')
         # ДЕНЬ4
         # Вопрос 1
-        time.sleep(30)
+        time.sleep(86400)
         bot.send_message(call.message.chat.id,
                          'Привет! Сегодня наше захватывающее путешествие подходит к концу, но именно '
                          'поэтому я подготовил для тебя самые интересные задания ☺ Поехали!')
@@ -4623,7 +4735,7 @@ def callback_worker_day1(call):
                                                '_дать ему возможность расслабится и только потом переходить к тому, _'
                                                '_чтобы ему помочь. _'
                                                '_Пока человек находиться в эмоциях он не готов воспринимать _'
-                                               '_информацию, '
+                                               '_информацию, _'
                                                '_анализировать ее и мыслить логически. _'
                                                '_Т.е. он не услышит вас, какое бы замечательное решение вы ему не _'
                                                '_предложили_', parse_mode="Markdown")
@@ -4870,6 +4982,61 @@ def callback_worker_day1(call):
                          'Ты старался, это похвально. Не переживай, скоро начнется обучение, на котором все станет '
                          'просто и понятно '
                          '\nВерный ответ: Все варианты верны')
+        time.sleep(10)
+        keyboard_type = types.InlineKeyboardMarkup()
+        btn_red = types.InlineKeyboardButton(text="Красный тип", callback_data="Красный тип")
+        btn_blue = types.InlineKeyboardButton(text="Синий тип", callback_data="Синий тип")
+        btn_yellow = types.InlineKeyboardButton(text="Желтый тип", callback_data="Желтый тип")
+        btn_green = types.InlineKeyboardButton(text="Зеленый тип", callback_data="Зеленый тип")
+        keyboard_type.add(btn_red, btn_blue)
+        keyboard_type.add(btn_yellow, btn_green)
+        btn_answer = types.InlineKeyboardButton(text="Перейти к ответам без прочтения",
+                                                callback_data="Перейти к ответам без прочтения")
+        keyboard_type.add(btn_answer)
+        bot.send_message(call.message.chat.id, 'Есть одна из типологий клиентов DISK.'
+                                               '\nОна поможет вам  понимать отличительные особенности клиентов и '
+                                               'выбирать правильные стратегии общения с каждым из них:  '
+                                               'быстро расположить клиента, избежать конфликтов с ним, а '
+                                               'также понять закономерности его поведения.'
+                                               '\nСогласно этой теории, мы условно делим клиентов по следующим '
+                                               'признакам: '
+                                               '\n✅степень выраженности лидерских качеств: '
+                                               '\n       ведомый/ведущий'
+                                               '\n✅склонность полагаться на логику/эмоции'
+                                               '\n'
+                                               '\n‼*Ведущий/ведомый.*'
+                                               '\n'
+                                               '\n1⃣Ведущий тип поведения выражается активность, решительностью в '
+                                               'поведении. '
+                                               'Он сам выбирает товары/услуги, точно знает, что именно он хочет '
+                                               'купить/уточнить, '
+                                               'и какие качества для него принципиальны. Эти люди демонстрируют '
+                                               'выраженные '
+                                               'лидерские качества, часто занимают руководящие позиции'
+                                               '\n'
+                                               '\n2⃣Ведомый тип  поведения означает, что такому человеку необходима '
+                                               'внешняя поддержка при принятии важных решений.'
+                                               'Они часто приходят выбирать товары с родственниками или друзьями и '
+                                               'активно с ними советуются. Если они пришли одни – они часто '
+                                               'ориентируются '
+                                               'на мнение продавца/консультанта, который должен помочь сделать выбор, '
+                                               'поддержать принятое решение или решить вопрос.'
+                                               '\n'
+                                               '\n‼*Логика/эмоции.*'
+                                               '\n'
+                                               '\n1⃣Клиент, который более склонен к логичному поведению, '
+                                               'будет в большей степени интересоваться фактическими характеристиками '
+                                               'товара. '
+                                               'Он часто занимает экспертную позицию в общении, демонстрирует хорошее '
+                                               'знание '
+                                               'товара/услуги и требует от продавца/консультанта того же самого'
+                                               '\n'
+                                               '\n2⃣На клиента - эмоцию в большей степени влияет именно '
+                                               'эмоциональность '
+                                               'и яркость подачи информации. Он в большей степени оценивает не сам '
+                                               'товар/услугу, а то, как он преподнесен. В данном случае ораторские '
+                                               'качества продавца/консультанта играют решающую роль.',
+                         parse_mode="Markdown", reply_markup=keyboard_type)
     if call.data == "Только А":
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\n_Эмпатия - осознанное сопереживание текущему эмоциональному _'
@@ -4884,6 +5051,61 @@ def callback_worker_day1(call):
                          'Ты старался, это похвально. Не переживай, скоро начнется обучение, на котором все станет '
                          'просто и понятно '
                          '\nВерный ответ: Все варианты верны')
+        time.sleep(10)
+        keyboard_type = types.InlineKeyboardMarkup()
+        btn_red = types.InlineKeyboardButton(text="Красный тип", callback_data="Красный тип")
+        btn_blue = types.InlineKeyboardButton(text="Синий тип", callback_data="Синий тип")
+        btn_yellow = types.InlineKeyboardButton(text="Желтый тип", callback_data="Желтый тип")
+        btn_green = types.InlineKeyboardButton(text="Зеленый тип", callback_data="Зеленый тип")
+        keyboard_type.add(btn_red, btn_blue)
+        keyboard_type.add(btn_yellow, btn_green)
+        btn_answer = types.InlineKeyboardButton(text="Перейти к ответам без прочтения",
+                                                callback_data="Перейти к ответам без прочтения")
+        keyboard_type.add(btn_answer)
+        bot.send_message(call.message.chat.id, 'Есть одна из типологий клиентов DISK.'
+                                               '\nОна поможет вам  понимать отличительные особенности клиентов и '
+                                               'выбирать правильные стратегии общения с каждым из них:  '
+                                               'быстро расположить клиента, избежать конфликтов с ним, а '
+                                               'также понять закономерности его поведения.'
+                                               '\nСогласно этой теории, мы условно делим клиентов по следующим '
+                                               'признакам: '
+                                               '\n✅степень выраженности лидерских качеств: '
+                                               '\n       ведомый/ведущий'
+                                               '\n✅склонность полагаться на логику/эмоции'
+                                               '\n'
+                                               '\n‼*Ведущий/ведомый.*'
+                                               '\n'
+                                               '\n1⃣Ведущий тип поведения выражается активность, решительностью в '
+                                               'поведении. '
+                                               'Он сам выбирает товары/услуги, точно знает, что именно он хочет '
+                                               'купить/уточнить, '
+                                               'и какие качества для него принципиальны. Эти люди демонстрируют '
+                                               'выраженные '
+                                               'лидерские качества, часто занимают руководящие позиции'
+                                               '\n'
+                                               '\n2⃣Ведомый тип  поведения означает, что такому человеку необходима '
+                                               'внешняя поддержка при принятии важных решений.'
+                                               'Они часто приходят выбирать товары с родственниками или друзьями и '
+                                               'активно с ними советуются. Если они пришли одни – они часто '
+                                               'ориентируются '
+                                               'на мнение продавца/консультанта, который должен помочь сделать выбор, '
+                                               'поддержать принятое решение или решить вопрос.'
+                                               '\n'
+                                               '\n‼*Логика/эмоции.*'
+                                               '\n'
+                                               '\n1⃣Клиент, который более склонен к логичному поведению, '
+                                               'будет в большей степени интересоваться фактическими характеристиками '
+                                               'товара. '
+                                               'Он часто занимает экспертную позицию в общении, демонстрирует хорошее '
+                                               'знание '
+                                               'товара/услуги и требует от продавца/консультанта того же самого'
+                                               '\n'
+                                               '\n2⃣На клиента - эмоцию в большей степени влияет именно '
+                                               'эмоциональность '
+                                               'и яркость подачи информации. Он в большей степени оценивает не сам '
+                                               'товар/услугу, а то, как он преподнесен. В данном случае ораторские '
+                                               'качества продавца/консультанта играют решающую роль.',
+                         parse_mode="Markdown", reply_markup=keyboard_type)
     if call.data == "Б, Г":
         bot.send_message(call.message.chat.id, 'Не верно! 🦉'
                                                '\n_Эмпатия - осознанное сопереживание текущему эмоциональному _'
@@ -4898,11 +5120,66 @@ def callback_worker_day1(call):
                          'Ты старался, это похвально. Не переживай, скоро начнется обучение, на котором все станет '
                          'просто и понятно '
                          '\nВерный ответ: Все варианты верны')
+        time.sleep(10)
+        keyboard_type = types.InlineKeyboardMarkup()
+        btn_red = types.InlineKeyboardButton(text="Красный тип", callback_data="Красный тип")
+        btn_blue = types.InlineKeyboardButton(text="Синий тип", callback_data="Синий тип")
+        btn_yellow = types.InlineKeyboardButton(text="Желтый тип", callback_data="Желтый тип")
+        btn_green = types.InlineKeyboardButton(text="Зеленый тип", callback_data="Зеленый тип")
+        keyboard_type.add(btn_red, btn_blue)
+        keyboard_type.add(btn_yellow, btn_green)
+        btn_answer = types.InlineKeyboardButton(text="Перейти к ответам без прочтения",
+                                                callback_data="Перейти к ответам без прочтения")
+        keyboard_type.add(btn_answer)
+        bot.send_message(call.message.chat.id, 'Есть одна из типологий клиентов DISK.'
+                                               '\nОна поможет вам  понимать отличительные особенности клиентов и '
+                                               'выбирать правильные стратегии общения с каждым из них:  '
+                                               'быстро расположить клиента, избежать конфликтов с ним, а '
+                                               'также понять закономерности его поведения.'
+                                               '\nСогласно этой теории, мы условно делим клиентов по следующим '
+                                               'признакам: '
+                                               '\n✅степень выраженности лидерских качеств: '
+                                               '\n       ведомый/ведущий'
+                                               '\n✅склонность полагаться на логику/эмоции'
+                                               '\n'
+                                               '\n‼*Ведущий/ведомый.*'
+                                               '\n'
+                                               '\n1⃣Ведущий тип поведения выражается активность, решительностью в '
+                                               'поведении. '
+                                               'Он сам выбирает товары/услуги, точно знает, что именно он хочет '
+                                               'купить/уточнить, '
+                                               'и какие качества для него принципиальны. Эти люди демонстрируют '
+                                               'выраженные '
+                                               'лидерские качества, часто занимают руководящие позиции'
+                                               '\n'
+                                               '\n2⃣Ведомый тип  поведения означает, что такому человеку необходима '
+                                               'внешняя поддержка при принятии важных решений.'
+                                               'Они часто приходят выбирать товары с родственниками или друзьями и '
+                                               'активно с ними советуются. Если они пришли одни – они часто '
+                                               'ориентируются '
+                                               'на мнение продавца/консультанта, который должен помочь сделать выбор, '
+                                               'поддержать принятое решение или решить вопрос.'
+                                               '\n'
+                                               '\n‼*Логика/эмоции.*'
+                                               '\n'
+                                               '\n1⃣Клиент, который более склонен к логичному поведению, '
+                                               'будет в большей степени интересоваться фактическими характеристиками '
+                                               'товара. '
+                                               'Он часто занимает экспертную позицию в общении, демонстрирует хорошее '
+                                               'знание '
+                                               'товара/услуги и требует от продавца/консультанта того же самого'
+                                               '\n'
+                                               '\n2⃣На клиента - эмоцию в большей степени влияет именно '
+                                               'эмоциональность '
+                                               'и яркость подачи информации. Он в большей степени оценивает не сам '
+                                               'товар/услугу, а то, как он преподнесен. В данном случае ораторские '
+                                               'качества продавца/консультанта играют решающую роль.',
+                         parse_mode="Markdown", reply_markup=keyboard_type)
     if call.data == "Все варианты верны":
         bot.send_sticker(call.message.chat.id,
                          'CAACAgIAAxkBAAKinl_1iHqWvCmHihgRmegbDgY8AAHQbgACWAMAAs-71A50qKHXJdURLB4E')
         time.sleep(1)
-        bot.send_message(call.message.chat.id, 'Верно!'
+        bot.send_message(call.message.chat.id, 'Верно! 🦉'
                                                '\n_Клиентоориентированность – это способность компании и сотрудников _'
                                                '_вовремя определять желания клиентов, чтобы удовлетворить их своей _'
                                                '_продукцией или услугой с максимальной выгодой. _'
@@ -4927,7 +5204,8 @@ def callback_worker_day1(call):
                                                'также понять закономерности его поведения.'
                                                '\nСогласно этой теории, мы условно делим клиентов по следующим '
                                                'признакам: '
-                                               '\n✅степень выраженности лидерских качеств: ведомый/ведущий'
+                                               '\n✅степень выраженности лидерских качеств: '
+                                               '\n       ведомый/ведущий'
                                                '\n✅склонность полагаться на логику/эмоции'
                                                '\n'
                                                '\n‼*Ведущий/ведомый.*'
@@ -5544,7 +5822,7 @@ def callback_worker_day1(call):
                                                '_последствия своих решений. Они также являются ведущим типом, _'
                                                '_то есть при принятии решений они опираются не на мнение_'
                                                '_ окружающих, а на итоги своих умозаключений._', parse_mode="Markdown")
-        time.sleep(5)
+        time.sleep(7)
         keyboard = types.InlineKeyboardMarkup()
         url_button = types.InlineKeyboardButton(text="Посмотреть видео",
                                                 url="https://drive.google.com/file/d/1IBiABfqv"
@@ -5579,7 +5857,7 @@ def callback_worker_day1(call):
                                                '_последствия своих решений. Они также являются ведущим типом, _'
                                                '_то есть при принятии решений они опираются не на мнение_'
                                                '_ окружающих, а на итоги своих умозаключений._', parse_mode="Markdown")
-        time.sleep(5)
+        time.sleep(7)
         keyboard = types.InlineKeyboardMarkup()
         url_button = types.InlineKeyboardButton(text="Посмотреть видео",
                                                 url="https://drive.google.com/file/d/1IBiABfqv"
@@ -5614,7 +5892,7 @@ def callback_worker_day1(call):
                                                '_последствия своих решений. Они также являются ведущим типом, _'
                                                '_то есть при принятии решений они опираются не на мнение_'
                                                '_ окружающих, а на итоги своих умозаключений._', parse_mode="Markdown")
-        time.sleep(5)
+        time.sleep(7)
         keyboard = types.InlineKeyboardMarkup()
         url_button = types.InlineKeyboardButton(text="Посмотреть видео",
                                                 url="https://drive.google.com/file/d/1IBiABf"
@@ -5645,7 +5923,7 @@ def callback_worker_day1(call):
         bot.send_sticker(call.message.chat.id, 'CAACAgIAAxkBAAKikl_1h8BSPRlysksnVmLmtm7sQA_OAAITAAPANk8TqrOH9384yqUeBA')
         time.sleep(1)
         bot.send_message(call.message.chat.id, 'Молодец!')
-        time.sleep(1)
+        time.sleep(2)
         keyboard = types.InlineKeyboardMarkup()
         url_button = types.InlineKeyboardButton(text="Посмотреть видео",
                                                 url="https://drive.google.com/file/d/1IBi"
@@ -5893,6 +6171,7 @@ def callback_worker_day1(call):
         time.sleep(3)
         bot.send_message(call.message.chat.id, 'Спасибо тебе за продуктивную работу ☺'
                                                'Ждем тебя в нашем Учебном центре 🤗')
+        time.sleep(1)
         bot.send_sticker(call.message.chat.id, 'CAACAgIAAxkBAAKiiV_1hubFqNWDR8E-mQsqctrlBOe9AALHAAMw1J0RtZ_tS_0N3O4eBA')
     if call.data == "В Мексике":
         bot.send_message(call.message.chat.id, 'Не верно!'
@@ -5900,6 +6179,7 @@ def callback_worker_day1(call):
         time.sleep(3)
         bot.send_message(call.message.chat.id, 'Спасибо тебе за продуктивную работу ☺'
                                                'Ждем тебя в нашем Учебном центре 🤗')
+        time.sleep(1)
         bot.send_sticker(call.message.chat.id, 'CAACAgIAAxkBAAKiiV_1hubFqNWDR8E-mQsqctrlBOe9AALHAAMw1J0RtZ_tS_0N3O4eBA')
     if call.data == "На границе":
         bot.send_message(call.message.chat.id, 'Не верно!'
@@ -5907,6 +6187,7 @@ def callback_worker_day1(call):
         time.sleep(3)
         bot.send_message(call.message.chat.id, 'Спасибо тебе за продуктивную работу ☺'
                                                'Ждем тебя в нашем Учебном центре 🤗')
+        time.sleep(1)
         bot.send_sticker(call.message.chat.id, 'CAACAgIAAxkBAAKiiV_1hubFqNWDR8E-mQsqctrlBOe9AALHAAMw1J0RtZ_tS_0N3O4eBA')
     if call.data == "В зависимости от национальности":
         bot.send_message(call.message.chat.id, 'Не верно!'
@@ -5914,6 +6195,7 @@ def callback_worker_day1(call):
         time.sleep(3)
         bot.send_message(call.message.chat.id, 'Спасибо тебе за продуктивную работу ☺'
                                                'Ждем тебя в нашем Учебном центре 🤗')
+        time.sleep(1)
         bot.send_sticker(call.message.chat.id, 'CAACAgIAAxkBAAKiiV_1hubFqNWDR8E-mQsqctrlBOe9AALHAAMw1J0RtZ_tS_0N3O4eBA')
     if call.data == "Нигде":
         bot.send_message(call.message.chat.id, 'Верно!'
@@ -5921,6 +6203,7 @@ def callback_worker_day1(call):
         time.sleep(3)
         bot.send_message(call.message.chat.id, 'Спасибо тебе за продуктивную работу ☺'
                                                'Ждем тебя в нашем Учебном центре 🤗')
+        time.sleep(1)
         bot.send_sticker(call.message.chat.id, 'CAACAgIAAxkBAAKiiV_1hubFqNWDR8E-mQsqctrlBOe9AALHAAMw1J0RtZ_tS_0N3O4eBA')
 
 
