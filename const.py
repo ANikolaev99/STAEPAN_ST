@@ -25,3 +25,15 @@ markup_menu_day3_start = types.ReplyKeyboardMarkup(resize_keyboard=True, row_wid
 btn_day3_znay = types.KeyboardButton('Да, конечно, знаю')
 btn_day3_ne_znay = types.KeyboardButton('Не уверен')
 markup_menu_day3_start.add(btn_day3_znay, btn_day3_ne_znay)
+
+markup_menu_poka_day1 = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
+btn_poka_1 = types.KeyboardButton('Перейти на второй уровень')
+markup_menu_poka_day1.add(btn_poka_1)
+
+markup_menu_poka_day2 = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
+btn_poka_2 = types.KeyboardButton('Перейти на третий уровень')
+markup_menu_poka_day2.add(btn_poka_2)
+
+markup_menu_poka_day3 = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
+btn_poka_3 = types.KeyboardButton('Перейти на четвертый уровень')
+markup_menu_poka_day3.add(btn_poka_3)
