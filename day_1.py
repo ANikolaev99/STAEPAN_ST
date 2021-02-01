@@ -97,14 +97,14 @@ def send_message_day1(message):
                          ' Спроси у руководителя проекта, как нас найти в соц сетях 📳'
                          '\nЛибо отправь мне сообщение со словом "Готов", когда сможешь пообщаться.')
 
-    #ДЕНЬ 2
+# ДЕНЬ 2
     elif message.text == "Перейти на второй уровень":
         time.sleep(1)
         bot.send_message(message.chat.id,
-                               'Приветствую тебя на новом уровне 😎'
-                               '\nПредлагаю поиграть: я тебе интересные вопросы - ты мне захватывающие ответы. '
-                               'Ну что, готов?',
-                               reply_markup=const.markup_menu_day2_start)
+                         'Приветствую тебя на новом уровне 😎'
+                         '\nПредлагаю поиграть: я тебе интересные вопросы - ты мне захватывающие ответы. '
+                         'Ну что, готов?',
+                         reply_markup=const.markup_menu_day2_start)
     elif message.text == "Да, поехали":
         bot.send_sticker(message.chat.id, 'CAACAgIAAxkBAAI_DF-X-nQjiGUsJ9dtnsFDLDqNxujSAAIpAAPBnGAM8EupHr_Y33wbBA')
         time.sleep(1)
@@ -148,14 +148,14 @@ def send_message_day1(message):
                                           '\nГ) если клиент сказал, что его зовут Саша, то так его и называем, '
                                           'не стоит переходить на Александр)',
                          reply_markup=keyboard_vopros1)
-    #ДЕНЬ 3
+    # ДЕНЬ 3
     elif message.text == "Перейти на третий уровень":
         time.sleep(1)
         bot.send_message(message.chat.id,
-                               '🥳'
-                               '\nДавай продолжим наше веселое времяпровождение. '
-                               'Знаешь ли ты, что такое потребности?',
-                               reply_markup=const.markup_menu_day3_start)
+                         '🥳'
+                         '\nДавай продолжим наше веселое времяпровождение. '
+                         'Знаешь ли ты, что такое потребности?',
+                         reply_markup=const.markup_menu_day3_start)
     elif message.text == "Да, конечно, знаю":
         bot.send_message(message.chat.id, 'Супер! Тогда приступим')
         time.sleep(2)
@@ -220,7 +220,7 @@ def send_message_day1(message):
                                           'времени…'
                                           'Найдите мне самый бюджетный вариант…А есть у вас рассрочка?',
                          reply_markup=keyboard_vopros1)
-    #ДЕНЬ 4
+    # ДЕНЬ 4
     elif message.text == "Перейти на четвертый уровень":
         time.sleep(1)
         bot.send_message(message.chat.id,
@@ -425,9 +425,9 @@ def callback_worker_day1(call):
         # ДЕНЬ2
         time.sleep(15)
         bot.send_message(call.message.chat.id, 'Поздравляю, ' + call.message.chat.first_name +
-                               ', ты успешно прошел начальный уровень ✌'
-                               '\nУверен, что и на следующем уровне тебя тоже '
-                               'ждет успех 🙃')
+                         ', ты успешно прошел начальный уровень ✌'
+                         '\nУверен, что и на следующем уровне тебя тоже '
+                         'ждет успех 🙃')
         time.sleep(1)
         bot.send_sticker(call.message.chat.id,
                          'CAACAgIAAxkBAAK5xWAJU2qAtZLqTJ48iU-dUGqRKOLuAAJYAwACz7vUDnSoodcl1REsHgQ',
@@ -1859,22 +1859,23 @@ def callback_worker_day1(call):
                          parse_mode="Markdown")
         time.sleep(2)
         bot.send_message(call.message.chat.id, 'Ух, отлично пообщались! ' + call.message.chat.first_name +
-                               ', я очень доволен тем, '
-                               'что мы стали ближе 🥰'
-                               '\nПосмотрим, как ты справишься со следующим уровнем 😏')
+                         ', я очень доволен тем, '
+                         'что мы стали ближе 🥰'
+                         '\nПосмотрим, как ты справишься со следующим уровнем 😏')
         time.sleep(1)
         bot.send_sticker(call.message.chat.id,
                          'CAACAgIAAxkBAAK51GAJW4z-gzgqFpAQgL0rEXXs2SDnAAJkAwACz7vUDohKFjPIdxptHgQ',
                          reply_markup=const.markup_menu_poka_day2)
     if call.data == "da_16":
         bot.send_message(call.message.chat.id, 'Не верно!'
-                               '\n_Не можете... потому что в этом случае вы - труп (в буквальном смысле!)_',
-                               parse_mode="Markdown")
+                                               '\n_Не можете... потому что в этом случае '
+                                               'вы - труп (в буквальном смысле!)_',
+                         parse_mode="Markdown")
         time.sleep(2)
         bot.send_message(call.message.chat.id, 'Ух, отлично пообщались! ' + call.message.chat.first_name +
-                               ', я очень доволен тем, '
-                               'что мы стали ближе 🥰'
-                               '\nПосмотрим, как ты справишься со следующим уровнем 😏')
+                         ', я очень доволен тем, '
+                         'что мы стали ближе 🥰'
+                         '\nПосмотрим, как ты справишься со следующим уровнем 😏')
         time.sleep(1)
         bot.send_sticker(call.message.chat.id,
                          'CAACAgIAAxkBAAK51GAJW4z-gzgqFpAQgL0rEXXs2SDnAAJkAwACz7vUDohKFjPIdxptHgQ',
@@ -1883,9 +1884,9 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Верно!')
         time.sleep(2)
         bot.send_message(call.message.chat.id, 'Ух, отлично пообщались! ' + call.message.chat.first_name +
-                               ', я очень доволен тем, '
-                               'что мы стали ближе 🥰'
-                               '\nПосмотрим, как ты справишься со следующим уровнем 😏')
+                         ', я очень доволен тем, '
+                         'что мы стали ближе 🥰'
+                         '\nПосмотрим, как ты справишься со следующим уровнем 😏')
         time.sleep(1)
         bot.send_sticker(call.message.chat.id,
                          'CAACAgIAAxkBAAK51GAJW4z-gzgqFpAQgL0rEXXs2SDnAAJkAwACz7vUDohKFjPIdxptHgQ',
@@ -4498,60 +4499,60 @@ def callback_worker_day1(call):
                                                '\n_У Моисея не было ковчега, соответственно он не спас _'
                                                '_ни одно животное...Ноев ковчег_', parse_mode="Markdown")
         time.sleep(3)
-        bot.send_message(call.message.chat.id,
-                         'До набора новичка 🎁 тебе остался всего один шаг 💪')
+        bot.send_message(call.message.chat.id, '' + call.message.chat.first_name +
+                         ', до набора новичка 🎁 тебе остался всего один шаг 💪')
         time.sleep(1)
         bot.send_sticker(call.message.chat.id,
-                               'CAACAgIAAxkBAAK53WAJXxgvMgVRIjwuwoNTGCG9Ekh2AAJvAwACz7vUDpIyjey9BupLHgQ',
-                               reply_markup=const.markup_menu_poka_day3)
+                         'CAACAgIAAxkBAAK53WAJXxgvMgVRIjwuwoNTGCG9Ekh2AAJvAwACz7vUDpIyjey9BupLHgQ',
+                         reply_markup=const.markup_menu_poka_day3)
 
     if call.data == "Несколько тысяч":
         bot.send_message(call.message.chat.id, 'Не верно!'
                                                '\n_У Моисея не было ковчега, соответственно он не спас ни одно _'
                                                '_животное... Ноев ковчег_', parse_mode="Markdown")
         time.sleep(3)
-        bot.send_message(call.message.chat.id,
-                         + call.message.chat.first_name + ', до набора новичка 🎁 тебе остался всего один шаг 💪')
+        bot.send_message(call.message.chat.id, '' + call.message.chat.first_name +
+                         ', до набора новичка 🎁 тебе остался всего один шаг 💪')
         time.sleep(1)
         bot.send_sticker(call.message.chat.id,
-                               'CAACAgIAAxkBAAK53WAJXxgvMgVRIjwuwoNTGCG9Ekh2AAJvAwACz7vUDpIyjey9BupLHgQ',
-                               reply_markup=const.markup_menu_poka_day3)
+                         'CAACAgIAAxkBAAK53WAJXxgvMgVRIjwuwoNTGCG9Ekh2AAJvAwACz7vUDpIyjey9BupLHgQ',
+                         reply_markup=const.markup_menu_poka_day3)
 
     if call.data == "Десятки тысяч":
         bot.send_message(call.message.chat.id, 'Не верно!'
                                                '\n_У Моисея не было ковчега, соответственно он не спас ни одно _'
                                                '_животное... Ноев ковчег_', parse_mode="Markdown")
         time.sleep(3)
-        bot.send_message(call.message.chat.id,
-                         + call.message.chat.first_name + ', до набора новичка 🎁 тебе остался всего один шаг 💪')
+        bot.send_message(call.message.chat.id, '' + call.message.chat.first_name +
+                         ', до набора новичка 🎁 тебе остался всего один шаг 💪')
         time.sleep(1)
         bot.send_sticker(call.message.chat.id,
-                               'CAACAgIAAxkBAAK53WAJXxgvMgVRIjwuwoNTGCG9Ekh2AAJvAwACz7vUDpIyjey9BupLHgQ',
-                               reply_markup=const.markup_menu_poka_day3)
+                         'CAACAgIAAxkBAAK53WAJXxgvMgVRIjwuwoNTGCG9Ekh2AAJvAwACz7vUDpIyjey9BupLHgQ',
+                         reply_markup=const.markup_menu_poka_day3)
 
     if call.data == "Около миллиона":
         bot.send_message(call.message.chat.id, 'Не верно!'
                                                '\n_У Моисея не было ковчега, соответственно он не спас ни одно _'
                                                '_животное... Ноев ковчег_', parse_mode="Markdown")
         time.sleep(3)
-        bot.send_message(call.message.chat.id,
-                         + call.message.chat.first_name + ', до набора новичка 🎁 тебе остался всего один шаг 💪')
+        bot.send_message(call.message.chat.id, '' + call.message.chat.first_name +
+                         ', до набора новичка 🎁 тебе остался всего один шаг 💪')
         time.sleep(1)
         bot.send_sticker(call.message.chat.id,
-                               'CAACAgIAAxkBAAK53WAJXxgvMgVRIjwuwoNTGCG9Ekh2AAJvAwACz7vUDpIyjey9BupLHgQ',
-                               reply_markup=const.markup_menu_poka_day3)
+                         'CAACAgIAAxkBAAK53WAJXxgvMgVRIjwuwoNTGCG9Ekh2AAJvAwACz7vUDpIyjey9BupLHgQ',
+                         reply_markup=const.markup_menu_poka_day3)
 
     if call.data == "Ни одного":
         bot.send_message(call.message.chat.id, 'Верно!'
                                                '\n_У Моисея не было ковчега, соответственно он не спас ни одно _'
                                                '_животное... Ноев ковчег_', parse_mode="Markdown")
         time.sleep(3)
-        bot.send_message(call.message.chat.id,
-                         + call.message.chat.first_name + ', до набора новичка 🎁 тебе остался всего один шаг 💪')
+        bot.send_message(call.message.chat.id,'' + call.message.chat.first_name +
+                         ', до набора новичка 🎁 тебе остался всего один шаг 💪')
         time.sleep(1)
         bot.send_sticker(call.message.chat.id,
-                               'CAACAgIAAxkBAAK53WAJXxgvMgVRIjwuwoNTGCG9Ekh2AAJvAwACz7vUDpIyjey9BupLHgQ',
-                               reply_markup=const.markup_menu_poka_day3)
+                         'CAACAgIAAxkBAAK53WAJXxgvMgVRIjwuwoNTGCG9Ekh2AAJvAwACz7vUDpIyjey9BupLHgQ',
+                         reply_markup=const.markup_menu_poka_day3)
 
     if call.data == "А, Б":
         bot.send_message(call.message.chat.id, 'Не верно!'
@@ -6077,7 +6078,7 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно!'
                                                '\n_Нигде. Выживших не хоронят, их откачивают!_', parse_mode="Markdown")
         time.sleep(3)
-        bot.send_message(call.message.chat.id, + call.message.chat.first_name +
+        bot.send_message(call.message.chat.id, '' + call.message.chat.first_name +
                          ', спасибо тебе за продуктивную работу ☺'
                          '\nЖдем тебя в нашем Учебном центре 🤗')
         time.sleep(1)
@@ -6087,7 +6088,7 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно!'
                                                '\n_Нигде. Выживших не хоронят, их откачивают!_', parse_mode="Markdown")
         time.sleep(3)
-        bot.send_message(call.message.chat.id, + call.message.chat.first_name +
+        bot.send_message(call.message.chat.id, '' + call.message.chat.first_name +
                          ', спасибо тебе за продуктивную работу ☺'
                          '\nЖдем тебя в нашем Учебном центре 🤗')
         time.sleep(1)
@@ -6097,7 +6098,7 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно!'
                                                '\n_Нигде. Выживших не хоронят, их откачивают!_', parse_mode="Markdown")
         time.sleep(3)
-        bot.send_message(call.message.chat.id, + call.message.chat.first_name +
+        bot.send_message(call.message.chat.id, '' + call.message.chat.first_name +
                          ', спасибо тебе за продуктивную работу ☺'
                          '\nЖдем тебя в нашем Учебном центре 🤗')
         time.sleep(1)
@@ -6107,7 +6108,7 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Не верно!'
                                                '\n_Нигде. Выживших не хоронят, их откачивают!_', parse_mode="Markdown")
         time.sleep(3)
-        bot.send_message(call.message.chat.id, + call.message.chat.first_name +
+        bot.send_message(call.message.chat.id, '' + call.message.chat.first_name +
                          ', спасибо тебе за продуктивную работу ☺'
                          '\nЖдем тебя в нашем Учебном центре 🤗')
         time.sleep(1)
@@ -6117,7 +6118,7 @@ def callback_worker_day1(call):
         bot.send_message(call.message.chat.id, 'Верно!'
                                                '\n_Выживших не хоронят, их откачивают!_', parse_mode="Markdown")
         time.sleep(3)
-        bot.send_message(call.message.chat.id, + call.message.chat.first_name +
+        bot.send_message(call.message.chat.id, '' + call.message.chat.first_name +
                          ', спасибо тебе за продуктивную работу ☺'
                          '\nЖдем тебя в нашем Учебном центре 🤗')
         time.sleep(1)
@@ -6125,5 +6126,4 @@ def callback_worker_day1(call):
                                                'Dh2-xX5QXp1vHgQ')
 
 
-if __name__ == '__main__':
-    bot.polling(none_stop=True)
+bot.polling(none_stop=True)
