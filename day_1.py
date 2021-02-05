@@ -4,7 +4,7 @@ from telebot import types
 import time
 import tg_analytic
 
-TOKEN = '1261241070:AAGxM_bK_Mk19Eit0rFF8WHk84fpwVPGfFA'  # полученный у @BotFather
+TOKEN = '************************'  # полученный у @BotFather
 bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])  # Первый запуск
